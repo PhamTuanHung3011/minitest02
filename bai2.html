@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    let length = +prompt(" Nhập số phần tử : ");
+    let arr = new Array(length);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = prompt('Nhập phần tử');
+    }
+    let symbol = prompt('Nhập phần tử cần tim: ')
+    document.write("Mảng là : " + arr + '<br>');
+    document.write('Phần tử cần tìm là: ' + symbol + '<br>');
+
+    function search(array, symbol) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (symbol === array[i]) {
+                count++;
+            }
+        }
+        if (count !== 0) {
+            document.write('Số phần tử cần tìm là: ' + count);
+        } else {
+            document.write('Không có phần tử  trong mảng');
+        }
+    }
+
+    search(arr, symbol);
+
+</script>
+
+
+</body>
+</html>

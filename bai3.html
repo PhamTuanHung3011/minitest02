@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    // let length = prompt('Nhap kich thuoc mang!');
+    // let arr = new Array(length);
+
+
+    let length = +prompt(" Nhập số phần tử : ");
+    let arr = new Array(length);
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = +prompt('Nhập phần tử');
+    }
+    document.write(arr + '<br>');
+
+    function count(array) {
+        let result = 0;
+        for (let i = 0; i < array.length; i++) {
+            let check = true;
+            if (array[i] < 2) {
+                check = false;
+            } else {
+                for (let j = 2; j <= Math.sqrt(array[i]); j++) {
+                    if (array[i] % j === 0) {
+                        check = false;
+                    }
+                }
+            }
+            if (check === true) {
+                result += array[i];
+            }
+        }
+        return result;
+    }
+
+    result = count(arr);
+    document.write(result);
+
+</script>
+
+
+</body>
+</html>
